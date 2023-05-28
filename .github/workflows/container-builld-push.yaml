@@ -1,8 +1,7 @@
+---
 name: Build Docker Container & Push to Docker Hub
-
 on:
-  workflow_dispatch:
-
+  workflow_dispatch: null
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -24,6 +23,6 @@ jobs:
             -t pbhorjee/tf-python:latest \
             -t pbhorjee/f-python:${GITHUB_SHA::7}-${GITHUB_RUN_ID::5} \
             .
-       - name: Push container
-         run: |
-           docker push pbhorjee/tf-python --all-tags
+      - name: Push container
+        run: |
+          docker push pbhorjee/tf-python --all-tags
