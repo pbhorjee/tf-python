@@ -9,7 +9,7 @@ metadata:
     # nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
   rules:
-   - host: www.pythonkeras.com
+   - host: www.bhorjee.com
      http:
         paths:
         - path: /
@@ -19,7 +19,7 @@ spec:
               name: tf-python
               port:
                 name: http
-   - host: pythonkeras.com
+   - host: bhorjee.com
      http:
           paths:
           - path: /
